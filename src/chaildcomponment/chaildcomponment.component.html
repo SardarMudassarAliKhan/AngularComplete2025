@@ -1,0 +1,20 @@
+<p>chaildcomponment works!</p>
+<p>{{ message }}</p>
+<button (click)="showAlert()">Show Alert</button>
+
+
+<div>  
+    Message : <h2>{{message}}</h2>  
+    <input type="button" value="Show Alert" (click)="showAlert()"/>  
+    <br/><br/>  
+    Provide Full Name : <input type="text" placeholder="mmm" [(ngModel)]="data.name">  
+    <br/>  
+    Provide Email Id : <input type="email" placeholder="mmm@mmm.com" [(ngModel)]="data.email">  
+    <br>  
+    <input type="button" value="Sign Up" (click)="onSubmit2()"/>  
+</div>
+
+<div>
+    Phone No : <input type="text" placeholder="mmm" [(ngModel)]="data.phone">
+    <input type="button" value="Submit" (click)="onPhoneNoSubmit()"/>
+</div>
