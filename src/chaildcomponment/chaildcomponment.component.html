@@ -18,3 +18,11 @@
     Phone No : <input type="text" placeholder="mmm" [(ngModel)]="data.phone">
     <input type="button" value="Submit" (click)="onPhoneNoSubmit()"/>
 </div>
+
+<div>
+    <h2>Message from Parent Component: {{ parentMessage }}</h2>
+</div>
+
+    <button (click)="sendParentMessage()">Send Array to Parent</button>
+
+

@@ -11,9 +11,21 @@
   <input type="number" id="inputB" [(ngModel)]="b" placeholder="Enter number for B">
   <input type="text" id="12" value="{{ a + b }}" placeholder="Sub of a and b" disabled>
 
+  <p>Amount: {{ amount | currency:'RS :' }}</p>
+
   <!-- Auto Calculate -->
   <p>Auto calculated sum: {{ a + b }}</p>
+
+  <div>
+    <h2 [appHighlight]="'lightblue'">Message from Parent Component:</h2>
+    <li *ngFor="let message of parentMessageArray">{{ message }}</li>
 </div>
+
+<p>Messages from child:</p>
+<ul [appHighlight]="'lightgreen'">
+  <li *ngFor="let msg of parentMessageArray">{{ msg }}</li>
+</ul>
+
 <app-chaildcomponment 
 [alert-pop22]="'Message from Parent Component'" 
 [alert-pop]="title"
@@ -22,5 +34,6 @@
 (onsignUp)="onSignup($event)"
 (onSignup2)="onSignup2($event)"
 (phoneNo)="onPhoneNoSubmit($event)"
-></app-chaildcomponment>
+(parentMessage3)="onParentMessageReceived($event)"
 
+></app-chaildcomponment>
